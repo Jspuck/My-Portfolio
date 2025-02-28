@@ -2,10 +2,9 @@
 	"folders": [
 		{
 			"path": "../Jaretts website"
-		},
-		{
-			"path": "../Task Mangement App"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Jaretts website"
+	}
 }
