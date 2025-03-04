@@ -1,139 +1,369 @@
-/* ============================
-   🔹 GLOBAL RESET & BODY STYLING
-   ============================ */
-   body, h1, h2, p, ul, li, a {
+/* ==========================================
+   🔹 GLOBAL RESET & GENERAL STYLING
+   ========================================== */
+   * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-    text-decoration: none;
 }
 
-/* General Page Styling */
 body {
-    color: #333;
     background-color: #f5f5f5;
-    line-height: 1.6;
-    background-image: url('images/Background for web.jpg'); /* Background Image */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================
+   🔹 BACKGROUND IMAGES (Ensuring Proper Paths)
+   ========================================== */
+.main-page {
+    background-image: url('images/homepage-background.jpg'); /* Fixed for homepage */
     background-size: cover;
-    background-repeat: no-repeat;
+    background-position: center;
     background-attachment: fixed;
 }
 
-/* ============================
-   🔹 HEADER SECTION
-   ============================ */
+.education-page {
+    background-image: url('images/education-back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.jobs-page {
+    background-image: url('images/jobs-background.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.right-fit-page {
+    background-image: url('images/right-fit-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ==========================================
+   🔹 HEADER & NAVIGATION
+   ========================================== */
 header {
     background-color: #4CAF50;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    position: relative;
 }
 
-/* ============================
-   🔹 NAVIGATION BAR STYLING
-   ============================ */
-nav {
-    text-align: center;
-}
-
-/* Navigation Button Styling */
-.nav-button {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
+/* Home Button in Header */
+.home-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: #2a9d8f;
     color: white;
+    padding: 10px 20px;
     border-radius: 5px;
-    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
     transition: background-color 0.3s;
 }
 
-/* Navigation Button Hover Effect */
+.home-button:hover {
+    background-color: #21867a;
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #2a9d8f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
 .nav-button:hover {
     background-color: #21867a;
 }
 
-/* ============================
-   🔹 MAIN CONTENT STYLING
-   ============================ */
+/* ==========================================
+   🔹 MAIN CONTENT AREA (For All Pages)
+   ========================================== */
 main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Pushes footer to bottom */
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-/* Section Headers */
-h2 {
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 10px;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-/* Paragraph Styling */
-main p {
-    text-indent: 20px;
-}
-
-/* ============================
-   🔹 FOOTER STYLING
-   ============================ */
-   footer {
-    margin-top: auto;  /* Pushes it to the bottom */
-    padding: 1rem;
+/* ==========================================
+   🔹 FOOTER FIX (Stays at Bottom)
+   ========================================== */
+footer {
     background-color: #4CAF50;
-    color: #fff;
+    color: white;
     text-align: center;
-    position: absolute; /* Fix it to bottom */
+    padding: 15px;
+    font-size: 16px;
     width: 100%;
+    position: relative;
     bottom: 0;
 }
 
+/* ==========================================
+   🔹 EDUCATION PAGE STYLING
+   ========================================== */
 
-/* ============================
-   🔹 BUBBLE SECTION (Personality Strengths)
-   ============================ */
-#personality-section {
-    text-align: center;
-    padding: 20px;
+   .education-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Bubble Container (Centers bubbles & spaces them evenly) */
+/* Hover Effect */
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* School Logos */
+.school-logo {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Text */
+.education-text {
+    flex: 1;
+}
+
+/* Headers */
+.education-text h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Subtext */
+.education-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* ==========================================
+   🔹 JOBS PAGE STYLING
+   ========================================== */
+.job-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Job Logos */
+.job-logo {
+    width: 80px;
+    height: auto;
+}
+
+/* Job Text */
+.job-text {
+    flex: 1;
+}
+
+.job-text h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.job-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* ==========================
+   🔹 RIGHT FIT PAGE STYLING
+   ========================== */
+   .right-fit-page {
+    background-image: url('images/right-fit-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensures the page stretches fully */
+#right-fit-content {
+    flex: 1; /* Pushes footer to the bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================
+   🔹 HEADER STYLING FIX
+   ========================== */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 24px;
+    position: relative;
+}
+
+/* Home Button (Properly Positioned) */
+.home-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #2a9d8f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #21867a;
+}
+
+/* ==========================
+   🔹 RIGHT FIT PAGE STYLING
+   ========================== */
+
+/* ==========================
+   🔹 RIGHT FIT PAGE STYLING
+   ========================== */
+
+/* Background for Right Fit Page */
+.right-fit-page {
+    background-image: url('images/right-fit-background.jpg'); /* Ensure correct path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Header Styling */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 24px;
+    position: relative;
+    width: 100%;
+}
+
+/* Home Button in Header */
+.home-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #2a9d8f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #21867a;
+}
+
+/* ==========================
+   🔹 BUBBLES (Personality Traits)
+   ========================== */
+
 #personality-section {
     text-align: center;
     padding: 20px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
-    gap: 30px; /* Adjust spacing between bubbles */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px; /* Spacing between bubbles */
+    margin-top: 40px;
 }
 
 /* Bubble Styling */
-/* Bubble Base Style */
 .bubble {
-    display: inline-block;
-    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     background-color: #4CAF50;
     color: white;
-    cursor: pointer;
-    margin: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 140px;
-    height: 140px;
-    line-height: 140px;
+    font-size: 1rem;
     text-align: center;
-    font-size: 1.2rem;
-    animation: pulse 2s infinite ease-in-out; /* Added pulsating animation */
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    animation: pulse 2s infinite ease-in-out; /* Pulsating animation */
 }
 
 /* Hover Effect */
 .bubble:hover {
-    transform: scale(1.15);
+    transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    animation: none; /* Stops pulsing while hovering for a smooth effect */
+    animation: none; /* Stops pulsing while hovering */
 }
 
 /* Keyframes for Pulsating Effect */
@@ -143,8 +373,8 @@ main p {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     }
     50% {
-        transform: scale(1.08); /* Slight scaling up */
-        box-shadow: 0 0 15px rgba(0, 255, 0, 0.6); /* Green glow */
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
     }
     100% {
         transform: scale(1);
@@ -152,11 +382,16 @@ main p {
     }
 }
 
+/* Fix text inside bubbles */
+.bubble span {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
 
-
-/* ============================
-   🔹 MODAL POPUP STYLING (For Personality Strengths)
-   ============================ */
+/* ==========================
+   🔹 MODAL POPUP (For Personality Details)
+   ========================== */
 
 /* Modal Background (Overlay) */
 .modal {
@@ -167,8 +402,8 @@ main p {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for better focus */
-    animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in effect */
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s ease-in-out;
 }
 
 /* Modal Content Box */
@@ -181,7 +416,7 @@ main p {
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     position: relative;
-    animation: scaleUp 0.3s ease-in-out; /* Add a pop-up effect */
+    animation: scaleUp 0.3s ease-in-out;
 }
 
 /* Modal Title */
@@ -228,142 +463,17 @@ main p {
     to { transform: scale(1); }
 }
 
-/* Background for Right Fit Page */
-.right-fit-page {
-    background-image: url('images/right-fit-background.jpg'); /* Ensure correct path */
-    background-size: 100% 100%;  /* Stretches fully without cutting */
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-attachment: fixed;
-    min-height: 100vh;
-    width: 100vw; /* Forces full width */
-}
-
-
-/* Prevents scrolling on the page */
-html, body {
-    overflow: hidden;
-    height: 100vh; /* Ensures the content fits inside the viewport */
-}
-
-/* Ensure the background image scales properly */
-#right-fit-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
-    background-size: cover;
-    background-position: center;
-}
-
-
-/* General Page Styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-/* Header */
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    font-size: 24px;
-}
-
-/* Navigation Bar */
-nav {
-    margin: 20px 0;
-}
-
-.nav-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #2a9d8f;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.nav-button:hover {
-    background-color: #21867a;
-}
-
-/* Education Section */
-.education-card {
-    max-width: 700px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-/* Logos for Schools */
-.school-logo {
-    width: 100px; /* Set same size for both logos */
-    height: auto;
-    margin-right: 20px;
-}
-
-/* Text Section */
-.education-text {
-    flex: 1; /* Takes remaining space */
-}
-
-/* Make Degree Titles Stand Out */
-.education-text h2 {
-    font-size: 22px;
-    font-weight: bold;
-}
-
-/* Keep Dates & GPA Styled */
-.education-text p {
-    margin: 5px 0;
-    font-size: 16px;
-}
-
-/* Footer - Stays at Bottom */
+/* ==========================
+   🔹 FOOTER STYLING (Ensures it stays at bottom)
+   ========================== */
 footer {
-    margin-top: 30px;
+    margin-top: auto;
     padding: 15px;
     background-color: #4CAF50;
     color: white;
     text-align: center;
-}
-
-/* Education Page Background */
-body {
-    background-image: url('images/education-back.jpg'); /* Path to your image */
-    background-size: cover; /* Make it cover the whole screen */
-    background-position: center; /* Center the image */
-    background-attachment: fixed; /* Keep it fixed when scrolling */
-    background-repeat: no-repeat; /* Prevent repeating */
-}
-
-/* Home Button in Header */
-.home-button {
-    position: absolute;
-    right: 20px; /* Align to the right */
-    top: 15px; /* Adjust vertical position */
-    background-color: #2a9d8f; /* Nice green shade */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.home-button:hover {
-    background-color: #21867a;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
