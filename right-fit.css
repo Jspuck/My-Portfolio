@@ -1,0 +1,202 @@
+/* ==========================
+   🔹 RIGHT FIT PAGE STYLING
+   ========================== */
+
+/* Background for Right Fit Page */
+.right-fit-page {
+    background-image: url('images/right-fit-background.jpg'); /* Ensure correct path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Header Styling */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 24px;
+    position: relative;
+    width: 100%;
+}
+
+/* Home Button in Header */
+.home-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #2a9d8f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #21867a;
+}
+
+/* ==========================
+   🔹 BUBBLES (Personality Traits)
+   ========================== */
+
+#personality-section {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px; /* Spacing between bubbles */
+    margin-top: 40px;
+}
+
+/* Bubble Styling */
+.bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    animation: pulse 2s infinite ease-in-out; /* Pulsating animation */
+}
+
+/* Hover Effect */
+.bubble:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: none; /* Stops pulsing while hovering */
+}
+
+/* Keyframes for Pulsating Effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Fix text inside bubbles */
+.bubble span {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* ==========================
+   🔹 MODAL POPUP (For Personality Details)
+   ========================== */
+
+/* Modal Background (Overlay) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 50%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+/* Modal Title */
+.modal-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2a9d8f;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Modal Text */
+#modalText {
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+    padding: 10px;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Smooth Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+
+/* ==========================
+   🔹 FOOTER STYLING (Ensures it stays at bottom)
+   ========================== */
+footer {
+    margin-top: auto;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

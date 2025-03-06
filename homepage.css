@@ -1,0 +1,54 @@
+/* BACKGROUND IMAGES */
+.main-page {
+    background-image: url('images/homepage-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Navigation Bar Styling */
+nav {
+    text-align: center;
+    margin: 20px 0; /* Adjust the margin as needed */
+    background-color: transparent; /* Ensures no background for the nav bar */
+}
+
+/* Navigation Button Styling */
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth color and scale transitions */
+    margin-right: 10px; /* Adds space between buttons */
+}
+
+.nav-button:last-child {
+    margin-right: 0; /* Ensures no extra margin on the last button */
+}
+
+.nav-button:hover, .nav-button:focus {
+    background-color: #367c39; /* Darker shade of green on hover/focus */
+    transform: translateY(-2px); /* Slight raise */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
+/* Ensures the navigation links are properly aligned */
+nav {
+    display: flex;
+    justify-content: center; /* Centers the navigation buttons horizontally */
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+}
+
+/* Styling adjustments for mobile screens */
+@media (max-width: 768px) {
+    .nav-button {
+        padding: 8px 16px; /* Slightly smaller padding on smaller screens */
+        font-size: 14px; /* Slightly smaller font size for better fit */
+        margin-bottom: 10px; /* Adds bottom margin for stacked buttons */
+    }
+}
+

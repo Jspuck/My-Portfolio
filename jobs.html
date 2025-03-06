@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work Experience - Jarett Spuck</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="jobs.css">
 </head>
 <body class="jobs-page">
-
     <header>
         <h1>Work Experience</h1>
         <a href="homepage.html" class="home-button">Home</a>
@@ -15,29 +15,38 @@
 
     <main class="jobs-container">
         <section class="job-card">
-            <img src="images/cinch-logo.png" alt="Cinch Logo" class="job-logo">
+            <img src="images/cinch-logo.jpg" alt="Cinch Logo" class="job-logo">
             <div class="job-details">
-                <p class="job-title">Cinch Home Services</p>
+                <p class="job-title" onclick="toggleJobDescription('cinch-desc')">Cinch Home Services</p>
                 <p>IT Intern | June 2024 - August 2024</p>
-                <p class="job-description">Developed web scrapers, worked with AWS, and improved internal software processes.</p>
+                <div id="cinch-desc" class="job-description" style="display:none;">
+                    Developed web scrapers, worked with AWS, and improved internal software processes.<br>
+                    <strong>Skills Used:</strong> JavaScript, AWS, Python
+                </div>
             </div>
         </section>
 
         <section class="job-card">
-            <img src="images/er-bradleys-logo.png" alt="E.R. Bradley's Logo" class="job-logo">
+            <img src="images/er-bradleys-logo.avif" alt="E.R. Bradley's Logo" class="job-logo">
             <div class="job-details">
-                <p class="job-title">E.R. Bradley's</p>
+                <p class="job-title" onclick="toggleJobDescription('er-desc')">E.R. Bradley's</p>
                 <p>Lead Server | June 2022 - December 2023</p>
-                <p class="job-description">Managed team of servers, improved service efficiency, and handled customer relations.</p>
+                <div id="er-desc" class="job-description" style="display:none;">
+                    Managed team of servers, improved service efficiency, and handled customer relations.<br>
+                    <strong>Skills Used:</strong> Leadership, Efficiency, Customer Service
+                </div>
             </div>
         </section>
 
         <section class="job-card">
             <img src="images/cinemark-logo.png" alt="Cinemark Logo" class="job-logo">
             <div class="job-details">
-                <p class="job-title">Cinemark</p>
+                <p class="job-title" onclick="toggleJobDescription('cinemark-desc')">Cinemark</p>
                 <p>Concessions | 2021 - 2022</p>
-                <p class="job-description">Handled high-volume sales, ensured customer satisfaction, and managed inventory.</p>
+                <div id="cinemark-desc" class="job-description" style="display:none;">
+                    Handled high-volume sales, ensured customer satisfaction, and managed inventory.<br>
+                    <strong>Skills Used:</strong> Sales Management, Customer Interaction, Inventory Management
+                </div>
             </div>
         </section>
     </main>
@@ -46,5 +55,6 @@
         <p>Contact: jarettspuck@gmail.com | 561-634-1274</p>
     </footer>
 
+    <script src="scripts.js"></script>
 </body>
 </html>

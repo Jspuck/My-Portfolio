@@ -2,9 +2,10 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
     });
 });
 
@@ -19,32 +20,36 @@ function expandBubble(trait) {
         leader: "I take initiative, motivate teams, and help projects reach their full potential."
     };
 
-    // Select modal elements
     const modal = document.getElementById("myModal");
     const modalText = document.getElementById("modalText");
     const modalHeader = document.getElementById("modalHeader");
 
-    // Update modal content
-    modalHeader.textContent = trait.replace(/([A-Z])/g, ' $1').trim(); // Formats trait names
-    modalText.textContent = descriptions[trait];
+    if (modal && modalText && modalHeader) {
+        modalHeader.textContent = trait.replace(/([A-Z])/g, ' $1').trim(); // Formats trait names
+        modalText.textContent = descriptions[trait];
 
-    // Show the modal with animations
-    modal.style.display = "block";
-    modal.classList.add("fade-in"); // Add fade-in effect
+        modal.style.display = "block";
+        modal.classList.add("fade-in");
 
-    // Close modal when clicking the close button
-    document.querySelector(".close").onclick = function() {
-        modal.classList.remove("fade-in");
-        setTimeout(() => modal.style.display = "none", 300);
-    };
-
-    // Close modal when clicking outside of it
-    window.onclick = function(event) {
-        if (event.target == modal) {
+        document.querySelector(".close").onclick = function() {
             modal.classList.remove("fade-in");
             setTimeout(() => modal.style.display = "none", 300);
-        }
-    };
+        };
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.classList.remove("fade-in");
+                setTimeout(() => modal.style.display = "none", 300);
+            }
+        };
+    }
 }
 
+// Toggle job description visibility
+function toggleJobDescription(id) {
+    var element = document.getElementById(id);
+    if (element) {
+        element.style.display = element.style.display === 'none' ? 'block' : 'none';
+    }
+}
 

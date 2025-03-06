@@ -1,0 +1,42 @@
+/* EDUCATION PAGE STYLING */
+.education-page {
+    background-image: url('images/education-back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.education-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.school-logo {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.education-text {
+    flex: 1;
+    h2 {
+        font-size: 22px;
+        font-weight: bold;
+    }
+    p {
+        font-size: 16px;
+        color: #555;
+    }
+}

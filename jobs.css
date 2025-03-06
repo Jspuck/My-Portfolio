@@ -1,0 +1,104 @@
+/* JOBS PAGE STYLING */
+.jobs-page {
+    background-image: url('images/jobs-background.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+header {
+    width: 100%;
+    background-color: #4CAF50; /* Green header for consistency */
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.home-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #2a9d8f; /* Teal color button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #21867a;
+}
+
+.jobs-container {
+    width: 80%;
+    max-width: 1000px;
+    margin-top: 100px; /* Offset from the fixed header */
+    padding: 20px;
+}
+
+.job-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.job-logo {
+    width: 80px;
+    height: auto;
+}
+
+.job-details {
+    flex: 1;
+}
+
+.job-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.job-description {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+    display: none; /* Hidden by default */
+}
+
+footer {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
