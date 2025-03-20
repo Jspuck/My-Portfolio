@@ -11,33 +11,27 @@
     padding-top: 20px;
 }
 
+/* Universal Header Styling */
 header {
     width: 100%;
     background-color: #4CAF50; /* Green header for consistency */
     color: white;
-    padding: 1em 0;
+    padding: 20px 0; /* Set padding to ensure the header height is consistent */
     text-align: center;
-    font-size: 2em;
+    font-size: 2em; /* Set a fixed font size */
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
+    margin-bottom: 0; /* Ensures no extra space below header */
 }
 
-.home-button {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #2a9d8f; /* Teal color button */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1em;
-    transition: background-color 0.3s;
+/* To prevent overlap with content, ensure padding on the main content */
+body {
+    padding-top: 80px; /* Adjust this value based on the header height */
 }
+
 
 .home-button:hover {
     background-color: #21867a;

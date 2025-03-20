@@ -18,31 +18,28 @@
 }
 
 /* Header Styling */
+/* Universal Header Styling */
 header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1.5rem 0;
-    font-size: 24px;
-    position: relative;
     width: 100%;
+    background-color: #4CAF50; /* Green header for consistency */
+    color: white;
+    padding: 20px 0; /* Set padding to ensure the header height is consistent */
+    text-align: center;
+    font-size: 2em; /* Set a fixed font size */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin-bottom: 0; /* Ensures no extra space below header */
 }
 
-/* Home Button in Header */
-.home-button {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #2a9d8f;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s;
+/* To prevent overlap with content, ensure padding on the main content */
+body {
+    padding-top: 80px; /* Adjust this value based on the header height */
 }
+
+
 
 .home-button:hover {
     background-color: #21867a;
