@@ -6,6 +6,20 @@
     <title>Work Experience - Jarett Spuck</title>
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="jobs.css">
+    <script>
+        // Toggle job description visibility (show on first click)
+        function toggleJobDescription(id) {
+            var element = document.getElementById(id);
+            if (element) {
+                // Check if it's already displayed
+                if (element.style.display === 'none' || element.style.display === '') {
+                    element.style.display = 'block'; // Show description
+                } else {
+                    element.style.display = 'none'; // Hide description
+                }
+            }
+        }
+    </script>
 </head>
 <body class="jobs-page">
     <header>
@@ -14,47 +28,76 @@
     </header>
 
     <main class="jobs-container">
-        <section class="job-card">
+        <!-- Job card 1 -->
+        <section class="job-card" onclick="toggleJobDescription('cinch-desc')">
             <img src="images/cinch-logo.jpg" alt="Cinch Logo" class="job-logo">
             <div class="job-details">
-                <p class="job-title" onclick="toggleJobDescription('cinch-desc')">Cinch Home Services</p>
-                <p>IT Intern | June 2024 - August 2024</p>
+                <p class="job-title">Cinch Home Services</p>
+                <p>Systems Engineer Intern | June 2023 – June 2024</p>
                 <div id="cinch-desc" class="job-description" style="display:none;">
-                    Developed web scrapers, worked with AWS, and improved internal software processes.<br>
-                    <strong>Skills Used:</strong> JavaScript, AWS, Python
+                    During my internship at Cinch Home Services, I had the opportunity to work on high-impact projects, collaborating with cross-functional teams and presenting solutions to top-level executives.<br><br>
+                    <strong>Web Scraper Development:</strong> Designed and implemented a Python-based web scraper to automate the comparison of part numbers and prices across multiple company-used websites. This tool provided real-time pricing data and streamlined procurement processes by reducing manual price-checking tasks. The scraper’s data is now regularly used to update the company's inventory and pricing strategies.<br><br>
+                    <strong>AWS Cloud Expertise:</strong> Worked hands-on with AWS services such as EC2, S3, Lambda, and CloudFormation to deploy scalable applications, manage data, and streamline cloud-based deployments. I also gained experience in integrating cloud-based tools into existing workflows, ensuring that processes were more efficient and cost-effective.<br><br>
+                    <strong>Presenting to Executives:</strong> Presented my projects, including the web scraping tool, to the CEO, CTO, and other senior executives. I demonstrated the value of automation in pricing and procurement and explained how the solutions aligned with the company's broader goals. This was a pivotal experience where I refined my communication and presentation skills, making complex technical solutions clear to a non-technical audience.<br><br>
+                    <strong>Mobile App Development:</strong> Contributed to the development of mobile applications for internal use, collaborating with front-end and back-end teams to integrate new features and improve user experience. These apps were designed to enhance employee productivity and simplify internal processes, showcasing my versatility in both cloud-based and mobile application development.<br><br>
+                    <strong>Key Achievements:</strong>
+                    - Presented a working prototype of the web scraper and received direct feedback from top-level executives, which shaped the tool’s future development.<br>
+                    - Successfully integrated cloud-based solutions, optimizing internal workflows and reducing operational overhead.<br>
+                    - Worked on mobile applications that improved internal communication and efficiency.<br><br>
+                    <strong>Technologies Used:</strong> Python, Javascript, AWS (EC2, S3, Lambda, CloudFormation), Mobile App Development (React Native)
                 </div>
             </div>
         </section>
-
-        <section class="job-card">
+        
+        
+        <section class="job-card" onclick="toggleJobDescription('er-desc')">
             <img src="images/er-bradleys-logo.avif" alt="E.R. Bradley's Logo" class="job-logo">
             <div class="job-details">
-                <p class="job-title" onclick="toggleJobDescription('er-desc')">E.R. Bradley's</p>
-                <p>Lead Server | June 2022 - December 2023</p>
+                <p class="job-title">E.R. Bradley's</p>
+                <p>Food Runner/Lead Server | November 2018 – June 2023</p>
                 <div id="er-desc" class="job-description" style="display:none;">
-                    Managed team of servers, improved service efficiency, and handled customer relations.<br>
-                    <strong>Skills Used:</strong> Leadership, Efficiency, Customer Service
+                    My time at E.R. Bradley's was an incredible journey that started with my promotion to Food Runner and eventually led to becoming Lead Server. My strong work ethic, exceptional customer service, and leadership qualities allowed me to thrive in a fast-paced, high-demand environment.<br><br>
+                    <strong>Promotion Due to Work Ethic:</strong> I was promoted from Food Runner to Server and eventually Lead Server due to my dedication, positive attitude, and exceptional work ethic. I consistently went above and beyond expectations, handling multiple tasks simultaneously and delivering excellent service during busy shifts.<br><br>
+                    <strong>Leadership & Event Management:</strong> As Lead Server, I was entrusted with overseeing operations during large, high-profile events such as buyout parties, weddings, and corporate gatherings. These events required careful planning, coordination, and attention to detail to ensure that every guest had an exceptional experience.<br><br>
+                    <strong>Staff Training & Development:</strong> I took pride in mentoring and training numerous new hires, helping them quickly adapt to the fast-paced environment. Through my guidance, many of the new staff members improved their efficiency, service skills, and overall job performance.<br><br>
+                    <strong>VIP Service Experience:</strong> Regularly attended to VIP tables and high-profile guests, ensuring their dining experience was flawless. My attention to detail and commitment to exceeding customer expectations made me the go-to server for important clientele.<br><br>
+                    <strong>Key Achievements:</strong>
+                    - Rapid Promotion: Promoted to Lead Server after demonstrating leadership, reliability, and exceptional performance.<br>
+                    - Event Coordination: Managed the service team during massive buyout parties, weddings, and corporate events, consistently ensuring smooth operations and guest satisfaction.<br>
+                    - Training Leadership: Played a key role in training new staff members, contributing to improved team performance and customer satisfaction.<br>
+                    - VIP Table Service: Frequently provided personalized service to VIP guests, ensuring their dining experience was memorable and exceeded expectations.<br><br>
+                    <strong>Skills & Technologies:</strong> Team Leadership, Event Management, Staff Training, Customer Relations, High-Pressure Environment Management
                 </div>
             </div>
         </section>
+        
+        
 
-        <section class="job-card">
+        <!-- Job card 3 -->
+        <section class="job-card" onclick="toggleJobDescription('cinemark-desc')">
             <img src="images/cinemark-logo.png" alt="Cinemark Logo" class="job-logo">
             <div class="job-details">
-                <p class="job-title" onclick="toggleJobDescription('cinemark-desc')">Cinemark</p>
-                <p>Concessions | 2021 - 2022</p>
+                <p class="job-title">Cinemark</p>
+                <p>Concessions | June 2016 - November 2018</p>
                 <div id="cinemark-desc" class="job-description" style="display:none;">
-                    Handled high-volume sales, ensured customer satisfaction, and managed inventory.<br>
-                    <strong>Skills Used:</strong> Sales Management, Customer Interaction, Inventory Management
+                     This was my first job ever and during my time at Cinemark, I was responsible for providing excellent service in a fast-paced, high-volume environment. My role involved ensuring customer satisfaction, managing inventory, and maintaining operational efficiency during peak times.<br><br>
+                    <strong>High-Volume Sales Management:</strong> Managed high-volume sales in the concessions area, ensuring that products were stocked, prepared, and delivered in a timely manner. During busy movie screenings, I excelled in meeting customer demand while maintaining efficiency and accuracy.<br><br>
+                    <strong>Customer Satisfaction:</strong> Focused on delivering exceptional customer service by addressing customer needs promptly and professionally. I handled a wide variety of customer inquiries and concerns, ensuring positive experiences for all guests.<br><br>
+                    <strong>Inventory Management:</strong> Took responsibility for inventory tracking and ensuring that products were available during high-demand periods. I maintained accurate stock levels, which contributed to smooth operations and reduced downtime.<br><br>
+                    <strong>Team Collaboration:</strong> Worked closely with fellow team members to maintain a high level of service quality. We worked together to quickly adapt to changing conditions during peak hours, ensuring that customers received prompt service.<br><br>
+                    <strong>Key Achievements:</strong>
+                    - **Fast-Paced Service:** Managed sales and service for large groups during movie premieres and opening nights, consistently meeting demand and ensuring smooth operations.<br>
+                    - **Customer Engagement:** Recognized by customers for excellent service and quick resolution of issues, resulting in positive feedback and repeat business.<br>
+                    - **Efficient Inventory Control:** Contributed to the organization and maintenance of stock levels, which helped ensure no stockouts during busy times.<br><br>
+                    <strong>Skills & Technologies:</strong> Sales Management, Customer Service, Inventory Control, Team Collaboration, Time Management
                 </div>
             </div>
         </section>
+        
     </main>
 
     <footer>
         <p>Contact: jarettspuck@gmail.com | 561-634-1274</p>
     </footer>
-
-    <script src="scripts.js"></script>
 </body>
 </html>

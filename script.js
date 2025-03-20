@@ -45,11 +45,15 @@ function expandBubble(trait) {
     }
 }
 
-// Toggle job description visibility
+// Toggle job description visibility (show on first click)
 function toggleJobDescription(id) {
     var element = document.getElementById(id);
     if (element) {
-        element.style.display = element.style.display === 'none' ? 'block' : 'none';
+        // Check if it's already displayed
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block'; // Show description
+        } else {
+            element.style.display = 'none'; // Hide description
+        }
     }
 }
-

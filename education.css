@@ -4,8 +4,36 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    padding-top: 80px; /* Increased space for header */
+    padding-bottom: 40px; /* Add space to avoid footer overlap */
+    min-height: 100vh; /* Ensure page takes up full height */
 }
 
+/* Green Header Styling - Match the Work Experience Page */
+header {
+    width: 100%;
+    background-color: #4CAF50; /* Green header for consistency */
+    color: white;
+    padding: 20px 0; /* Padding to make it similar to the work experience page */
+    text-align: center;
+    font-size: 2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin-bottom: 40px; /* Margin to create space below header */
+}
+
+/* Education Container to limit width */
+.education-container {
+    max-width: 700px; /* Make it smaller for compactness */
+    margin: 0 auto; /* Center the container */
+    padding-top: 40px; /* Add space from the top */
+    padding-bottom: 40px; /* Space below for a cleaner look */
+}
+
+/* Education Card Styling */
 .education-card {
     display: flex;
     align-items: center;
@@ -14,8 +42,9 @@
     background-color: white;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Increase space between cards */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
 }
 
 .education-card:hover {
@@ -24,19 +53,16 @@
 }
 
 .school-logo {
-    width: 100px;
+    width: 80px; /* Adjusted size for better fit */
     height: auto;
-    margin-right: 20px;
 }
 
-.education-text {
-    flex: 1;
-    h2 {
-        font-size: 22px;
-        font-weight: bold;
-    }
-    p {
-        font-size: 16px;
-        color: #555;
-    }
+.education-text h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.education-text p {
+    font-size: 16px;
+    color: #555;
 }
